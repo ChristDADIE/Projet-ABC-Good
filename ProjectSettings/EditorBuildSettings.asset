@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/PhysicScene.unity
     guid: 1e268ec3842e9424cbdf26ae2f1f6f19
   - enabled: 1
-    path: Assets/Scenes/TestEnvEtMenu.unity
+    path: Assets/Scenes/PRINCIPAL.unity
     guid: 29aa3eb2de265104dbfa379e2f055fc1
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: c44db89da6386824bb7ea01deba929d2, type: 2}
