@@ -79,7 +79,7 @@ public class LevelManager : MonoBehaviour
         SetupAssets();
         active = true;
         data = JsonConvert.DeserializeObject<Data>(levels[Id].text);
-        levelIndicator.text = "Level " + Id;
+        //levelIndicator.text = "Level " + Id;
         phase = 0;
         ResetVariables();
     }
@@ -147,6 +147,7 @@ public class LevelManager : MonoBehaviour
 
     void LevelUpdate() // called approximately one time per fixed update
     {
+        life += Time.fixedDeltaTime;
         if(life <= 0)
         {
             active = false;

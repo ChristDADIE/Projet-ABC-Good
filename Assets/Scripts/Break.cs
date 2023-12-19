@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Break : MonoBehaviour
 {
@@ -17,7 +18,8 @@ public class Break : MonoBehaviour
 
     void OnCollisionEnter()
     {
-        if (transform.position.magnitude > DistanceSpawn)
+        XRGrabInteractable _;
+        if (transform.position.magnitude > DistanceSpawn || !TryGetComponent< XRGrabInteractable>(out _))
             breaking();
         else if(GetComponent<Rigidbody>().velocity.magnitude > minVelocityInSpawn)
         {

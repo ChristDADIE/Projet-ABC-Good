@@ -7074,6 +7074,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 194d5f33aa3b9f8478d5ef9e66d743a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rightHand: {fileID: 683979807}
+  leftHand: {fileID: 2072543076}
+  bouton:
+    m_Name: Bouton
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: d1c9e1b1-b404-4f51-9540-45734ec15246
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 891f1052-39ab-4755-a4b8-f87ef1d1535d
+      m_Path: <OculusTouchController>{LeftHand}/secondaryButton
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Bouton
+      m_Flags: 0
+    - m_Name: 
+      m_Id: 69a159b7-c95c-47b3-a804-242b81819d08
+      m_Path: <Keyboard>/h
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Bouton
+      m_Flags: 0
+    m_Flags: 0
 --- !u!1 &1780231249 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8801662335925708347, guid: 238c2b541b4f64f01bd6edfb9df96371, type: 3}
