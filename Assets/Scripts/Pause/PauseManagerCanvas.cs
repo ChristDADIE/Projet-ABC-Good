@@ -19,9 +19,10 @@ public class PauseManagerCanvas : MonoBehaviour
 
     public void exprimenter() {
 
+        panelExperimenter.SetActive(true);
         panelPause.SetActive(false);
         Environement.SetActive(false);
-        panelExperimenter.SetActive(true);
+        
 
 
 

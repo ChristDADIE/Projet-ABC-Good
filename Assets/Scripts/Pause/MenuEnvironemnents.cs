@@ -17,13 +17,6 @@ public class MenuEnvironemnents : MonoBehaviour
     public GameObject panelExperimenter;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        EnvPlane.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
     public void foret()
     {
 

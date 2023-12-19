@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/ScenePrincipal 1.unity
     guid: 183d379f4334a0a43af02937d9591cbf
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/TestEnvEtMenu.unity
     guid: 29aa3eb2de265104dbfa379e2f055fc1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PhysicScene.unity
     guid: 1e268ec3842e9424cbdf26ae2f1f6f19
   m_configObjects:
