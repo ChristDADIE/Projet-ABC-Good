@@ -216,9 +216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fiole: {fileID: 4716253251355569772, guid: 186b7c4987b3efe4f98ae54288b04057, type: 3}
-  position: {x: 0, y: 0.4, z: 0}
+  position: {x: 0, y: 0.3, z: 0}
   deltaTime: 2
-  deltaPosition: 1
+  deltaPosition: 0.2
 --- !u!64 &203720103
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6789,9 +6789,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fiole: {fileID: 3263435756568389856, guid: c723d16124fd5234b94f5eea289eed6a, type: 3}
-  position: {x: 0, y: 0.4, z: 0}
+  position: {x: 0, y: 0.3, z: 0}
   deltaTime: 2
-  deltaPosition: 1
+  deltaPosition: 0.2
 --- !u!64 &1519990463
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7917,6 +7917,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5845833936907432278, guid: 35c4be6975aaa4d79b81f1bba1c1492c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845833936907432278, guid: 35c4be6975aaa4d79b81f1bba1c1492c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845833936907432278, guid: 35c4be6975aaa4d79b81f1bba1c1492c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5845833937349071108, guid: 35c4be6975aaa4d79b81f1bba1c1492c, type: 3}
       propertyPath: m_RootOrder
       value: 7
