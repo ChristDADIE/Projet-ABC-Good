@@ -341,6 +341,60 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &461339504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5196335664271931529, guid: c5bd7a753d28a4971a308e935c29a470, type: 3}
+  m_PrefabInstance: {fileID: 1345090125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &461339508
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461339504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f072503382564ce29247a8205d44ec0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  putOnGloves:
+    m_Name: Put On Gloves
+    m_Type: 0
+    m_ExpectedControlType: 
+    m_Id: 74640b20-fe7c-49d9-9dc6-d68ac6e0e053
+    m_Processors: 
+    m_Interactions: 
+    m_SingletonActionBindings:
+    - m_Name: 
+      m_Id: 308d9906-4330-4720-8413-f89106a4fec5
+      m_Path: <OculusTouchController>/trigger
+      m_Interactions: 
+      m_Processors: 
+      m_Groups: 
+      m_Action: Put On Gloves
+      m_Flags: 0
+    m_Flags: 0
+  handLhand: {fileID: 609916876}
+  handRhand: {fileID: 1258480424}
+--- !u!65 &461339509
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461339504}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020000001, y: 0.02, z: 0.020000007}
+  m_Center: {x: 0, y: 0.0000000037252903, z: -0.000000029802322}
+--- !u!1 &609916876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 109434732395284511, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  m_PrefabInstance: {fileID: 1912764681}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &683979802
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,6 +1131,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1258480424 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5686134208185362928, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 1379421199}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1345090125
 PrefabInstance:
   m_ObjectHideFlags: 0
