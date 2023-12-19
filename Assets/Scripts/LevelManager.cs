@@ -246,6 +246,7 @@ public class LevelManager : MonoBehaviour
             if (enemy.isDead)
             {
                 deads.Add(enemy);
+                enemykilled += 1;
             }
         }
 
