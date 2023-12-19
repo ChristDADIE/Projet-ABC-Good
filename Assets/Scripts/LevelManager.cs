@@ -140,6 +140,11 @@ public class LevelManager : MonoBehaviour
         return currentEnemies.Count == 0;
     }
 
+    public void debug(string text)
+    {
+        phaseIndicator.text = text;
+    }
+
     void LevelUpdate() // called approximately one time per fixed update
     {
         if(life <= 0)

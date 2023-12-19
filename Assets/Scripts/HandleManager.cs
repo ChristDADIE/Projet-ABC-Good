@@ -19,6 +19,7 @@ public class HandleManager : MonoBehaviour
         UnityEngine.XR.InputDevices.GetDevices(inputDevices);
         foreach (var device in inputDevices)
         {
+            MainManager.main.GetComponent<LevelManager>().debug("in for");
             bool triggerValue;
             if(device.characteristics == UnityEngine.XR.InputDeviceCharacteristics.Right)
             {
@@ -39,29 +40,30 @@ public class HandleManager : MonoBehaviour
     }
     public void RightLaunch()
     {
-        
-        if(rightHand.interactablesSelected[0].transform.TryGetComponent<Rigidbody>(out Rigidbody rb))
+        if(rightHand.interactablesSelected.Count > 0)
         {
-            Destroy(rb.GetComponent<XRGrabInteractable>());
-            rb.AddForce(rb.transform.position - rightHand.transform.position, ForceMode.VelocityChange);
+            if (rightHand.interactablesSelected[0].transform.TryGetComponent<Rigidbody>(out Rigidbody rb))
+            {
+                Destroy(rb.GetComponent<XRGrabInteractable>());
+                rb.AddForce(rb.transform.position - rightHand.transform.position, ForceMode.VelocityChange);
+            }
         }
-        else
-        {
 
-        }
     }
 
     public void LeftLaunch()
     {
-
-        if (leftHand.interactablesSelected[0].transform.TryGetComponent<Rigidbody>(out Rigidbody rb))
+        if (leftHand.interactablesSelected.Count > 0)
         {
-            Destroy(rb.GetComponent<XRGrabInteractable>());
-            rb.AddForce(rb.transform.position - leftHand.transform.position, ForceMode.VelocityChange);
-        }
-        else
-        {
+            if (leftHand.interactablesSelected[0].transform.TryGetComponent<Rigidbody>(out Rigidbody rb))
+            {
+                Destroy(rb.GetComponent<XRGrabInteractable>());
+                rb.AddForce(rb.transform.position - leftHand.transform.position, ForceMode.VelocityChange);
+            }
+            else
+            {
 
+            }
         }
     }
 }
