@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f60db184b93b7146bc1b08ae7eba85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyName: purple
+  enemyName: red
   baseHealth: 50
   baseSpeed: 1
   baseAttack: 1

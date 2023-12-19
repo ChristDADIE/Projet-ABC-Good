@@ -17,6 +17,8 @@ public class LevelManager : MonoBehaviour
     [System.NonSerialized]
     public float life = 100;
 
+    public TMPro.TextMeshPro levelIndicator,phaseIndicator;
+
     void Start()
     {
         enemynames = new string[enemies.Length];
@@ -77,6 +79,7 @@ public class LevelManager : MonoBehaviour
         SetupAssets();
         active = true;
         data = JsonConvert.DeserializeObject<Data>(levels[Id].text);
+        levelIndicator.text = "Level " + Id;
         phase = 0;
         ResetVariables();
     }
@@ -104,6 +107,7 @@ public class LevelManager : MonoBehaviour
             }
         }
         enemykilled = 0;
+        phaseIndicator.text = "Phase " + (phase+1);
     }
 
     void SpawnEnemies(string type, int number, int factor)
@@ -141,6 +145,7 @@ public class LevelManager : MonoBehaviour
         if(life <= 0)
         {
             active = false;
+            levelIndicator.text = "Game over";
             KillAll();
             GetComponent<MainManager>().LevelEnded();
             return;
@@ -207,7 +212,8 @@ public class LevelManager : MonoBehaviour
                         SpawnEnemies(data.rounds[phase].enemies[enemyId], data.rounds[phase].number[enemyId], data.rounds[phase].factor[enemyId]);
                     }
                 }
-                if (enemykilled > data.rounds[phase].nb)
+                Debug.Log("enemy killed: " + enemykilled + "; nb : " + data.rounds[phase].nb);
+                if (enemykilled >= data.rounds[phase].nb)
                 {
                     phase += 1;
                     ResetVariables();

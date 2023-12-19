@@ -188,7 +188,7 @@ MonoBehaviour:
   spawn: {fileID: 5760313731642660762, guid: 9a9e4149fe6fa2d418175d501adb06da, type: 3}
   liquid: {fileID: 4705619215483609015}
   DistanceSpawn: 3
-  minVelocityInSpawn: 3
+  minVelocityInSpawn: 1
 --- !u!114 &8042147264933946748
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(LevelManager))]
 [RequireComponent(typeof(OutsideParticleManager))]
+[RequireComponent(typeof(HandleManager))]
 public class MainManager : MonoBehaviour
 {
     public enum context

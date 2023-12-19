@@ -24,4 +24,11 @@ public class ColorizedSlime : Slime
                 Damage(damage.damageAmounts[i]* factor, damage.damageTypes[i]);
         }
     }
+
+    protected override void Animation()
+    {
+        base.Animation();
+        if (subdivision == -1)
+            isDead = true;
+    }
 }
