@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
+//using UnityEngine.InputSystem;
 
 
 public class GloveBox : MonoBehaviour
 {
 
-    public InputAction putOnGloves;
+    //public InputAction putOnGloves;
 
     [SerializeField] GameObject handLhand;
     [SerializeField] GameObject handRhand;
@@ -18,15 +18,15 @@ public class GloveBox : MonoBehaviour
     bool glovesOn;
 
 
-    void OnEnable() 
-    {
-        putOnGloves.Enable();
-    }
+    // void OnEnable() 
+    // {
+    //     putOnGloves.Enable();
+    // }
 
-    void OnDisable() 
-    {
-        putOnGloves.Disable();
-    }
+    // void OnDisable() 
+    // {
+    //     putOnGloves.Disable();
+    // }
 
 
     // Start is called before the first frame update
@@ -35,19 +35,13 @@ public class GloveBox : MonoBehaviour
         glovesOn = false; 
 
         gloveColor = new Color(0.173f, 0.651f, 0.91f, 1.0f);
-        normalColor = new Color(0.878f, 0.608f, 0.067f, 1.0f);
-
-        putOnGloves.performed += OnGrab;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        normalColor = new Color(0.811f, 0.652f, 0.524f, 1.0f);
     }
 
 
-    void OnGrab(InputAction.CallbackContext context) 
+
+
+    public void PutOnGloves() 
     {
         if (glovesOn)
         {
@@ -60,5 +54,6 @@ public class GloveBox : MonoBehaviour
             handLhand.GetComponent<Renderer>().material.SetColor("_Color", gloveColor);
             handRhand.GetComponent<Renderer>().material.SetColor("_Color", gloveColor);
         }
+        glovesOn = !glovesOn;
     }
 }

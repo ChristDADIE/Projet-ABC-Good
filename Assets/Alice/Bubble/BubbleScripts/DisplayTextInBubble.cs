@@ -12,7 +12,7 @@ public class DisplayTextInBubble : MonoBehaviour
 
     [SerializeField] GameObject bubble;
     [SerializeField] TextMeshProUGUI textMeshPro;
-    private int maxChar = 52;
+    private int maxChar = 48;
     
 
 
@@ -74,9 +74,9 @@ public class DisplayTextInBubble : MonoBehaviour
         {
             if (length + word.Length > maxChar) 
             {
-                chunk = string.Concat(chunk, " ...");
+                chunk = string.Concat(chunk, "...");
                 textChunks.Add(chunk);
-                chunk = "";   
+                chunk = string.Concat(word, ' ');   
                 length = 0;
             }
 
