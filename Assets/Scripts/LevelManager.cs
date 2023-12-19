@@ -162,7 +162,7 @@ public class LevelManager : MonoBehaviour
             GetComponent<MainManager>().LevelEnded();
             return;
         }
-        time += Time.fixedDeltaTime;
+        
         for (int enemyId = 0; enemyId != data.rounds[phase].enemies.Count; ++enemyId)
         {
             cooldown[enemyId] += Time.fixedDeltaTime;
@@ -246,6 +246,7 @@ public class LevelManager : MonoBehaviour
                 }
                 break;
         }
+        time += Time.fixedDeltaTime;
     }
 
 

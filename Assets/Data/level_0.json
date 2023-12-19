@@ -60,7 +60,7 @@
 
       "enemies": [ "purple" ],
       "number": [ 1 ],
-      "factor": [ 10 ],
+      "factor": [ 20 ],
 
       "condition": "kill",
       "nb": 1
