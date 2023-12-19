@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4809117298602800726}
   - component: {fileID: 5760313731642660762}
   - component: {fileID: 25082926025447191}
+  - component: {fileID: 6570493423337105487}
   m_Layer: 0
   m_Name: Splash
   m_TagString: Untagged
@@ -4917,3 +4918,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   penetration: -1
+--- !u!114 &6570493423337105487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401329071657496515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8057f56cfd05dc4b9a3444be8e72e96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lifetime: 4

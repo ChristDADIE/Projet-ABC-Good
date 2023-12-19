@@ -36,16 +36,19 @@ public class Liquide : MonoBehaviour
         }
     }
 
+    
+
     public float Quantity
     {
         get
         {
-            return quantity;
+            return quantity* volume;
+
         }
 
         set
         {
-            quantity = value;
+            quantity = value/volume;
         }
     }
 

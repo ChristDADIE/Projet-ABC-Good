@@ -352,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   volume: 1
-  color: {r: 0, g: 0, b: 1, a: 0}
+  color: {r: 0, g: 0, b: 1, a: 1}
   shapes:
   - {fileID: -2432090755550338912, guid: 1b263ee69a64a1147ab4bb0418afc178, type: 3}
   - {fileID: -2432090755550338912, guid: 211a2f1f07a1d5b4db197938cd103a2c, type: 3}

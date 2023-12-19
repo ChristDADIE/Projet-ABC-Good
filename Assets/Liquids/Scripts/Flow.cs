@@ -34,20 +34,19 @@ public class Flow : MonoBehaviour
     }
 
     float cooldown = 0;
-    const float factor_flow = 10;
     void Update()
     {
         if(liquid.Quantity != 0)
         {
-            if(liquid.Property.quantity < liquid.Flowing)
+            if(liquid.Quantity < liquid.Flowing)
             {
-                cooldown += factor_flow * liquid.Property.quantity;
+                cooldown += liquid.Quantity;
                 liquid.Quantity = 0;
             }
             else
             {
-                cooldown += factor_flow * liquid.Flowing;
-                liquid.Quantity -= liquid.Flowing/liquid.volume;
+                cooldown += liquid.Flowing;
+                liquid.Quantity -= liquid.Flowing;
             }
             float delay = 1 / particlePerUnit;
             while (cooldown >= delay)
