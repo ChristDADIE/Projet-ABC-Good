@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuEnvironemnents : MonoBehaviour
 {
@@ -70,7 +71,7 @@ public class MenuEnvironemnents : MonoBehaviour
     public void quitter()
     {
 
-        //SceneManager.LoadScene("Scene quitter");
+        SceneManager.LoadScene("Fin");
 
 
 

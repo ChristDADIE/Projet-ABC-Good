@@ -15,6 +15,8 @@ public class MenuExperimenter : MonoBehaviour
     public GameObject panelPause;
     public GameObject panelExperimenter;
 
+    public GameObject bullePhysics;
+
 
     public void retour()
     {
@@ -30,6 +32,9 @@ public class MenuExperimenter : MonoBehaviour
 
         Pyhisque.SetActive(true);
         EnvPlane.SetActive(true);
+
+
+        
 
         panelPause.SetActive(false);
         Environement.SetActive(false);

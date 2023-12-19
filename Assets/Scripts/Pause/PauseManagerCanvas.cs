@@ -30,7 +30,7 @@ public class PauseManagerCanvas : MonoBehaviour
 
     public void ModeDeJeu()
     {
-        SceneManager.LoadScene("Tutoriel");
+        //SceneManager.LoadScene("Tutoriel");
     }
 
     public void environnements()

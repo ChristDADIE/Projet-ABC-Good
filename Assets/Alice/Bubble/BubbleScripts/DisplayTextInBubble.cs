@@ -12,14 +12,15 @@ public class DisplayTextInBubble : MonoBehaviour
 
     [SerializeField] GameObject bubble;
     [SerializeField] TextMeshProUGUI textMeshPro;
-    private int maxChar = 48;
+    private int maxChar = 55;
+
+    bool isDisplaying = false;
     
 
 
     void Start()
     {
         // Bulle et texte invisibles au départ
-        // à remettre après !!!
         //StopDisplay();
 
         //Display("Lorsqu on ajoute une solution basique dans une solution acide, le pH de la solution acide augmente. Les industriels utilisent cette technique appelée neutralisation de manière à obtenir des solutions neutres (pH = 7) avant de les rejeter à l’égout. Les ions hydrogène réagissent avec les ions hydroxyde pour donner de l’eau");
@@ -31,11 +32,15 @@ public class DisplayTextInBubble : MonoBehaviour
         bubble.SetActive(true);
 
         textMeshPro.SetText(text);
+
+        isDisplaying = true;
     }
 
     public void StopDisplay() 
     {
         bubble.SetActive(false);
+
+        isDisplaying = false;
     }
 
     public void Display(string text)
