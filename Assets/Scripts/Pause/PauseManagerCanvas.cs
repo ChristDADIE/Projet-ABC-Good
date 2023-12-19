@@ -12,7 +12,8 @@ public class PauseManagerCanvas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        panelPause.SetActive(true);
+        //panelPause.SetActive(true);
+        
     }
 
 
