@@ -35,6 +35,16 @@ public class OutsideParticleManager : MonoBehaviour
         particles.Remove(pl);
     }
 
+    public void AddLiquide(Liquide l)
+    {
+        liquids.Add(l);
+    }
+
+    public void RemoveLiquide(Liquide l)
+    {
+        liquids.Remove(l);
+    }
+
     // Update is called once per frame
     void Update()
     {

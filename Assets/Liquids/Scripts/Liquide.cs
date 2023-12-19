@@ -78,6 +78,16 @@ public class Liquide : MonoBehaviour
     [SerializeField]
     public Vector3 output;
 
+    public void Awake()
+    {
+        MainManager.main.GetComponent<OutsideParticleManager>().AddLiquide(this);
+    }
+
+    public void OnDestroy()
+    {
+        MainManager.main.GetComponent<OutsideParticleManager>().RemoveLiquide(this);
+    }
+
     public bool Calm
     {
         get

@@ -27,7 +27,7 @@ public class Flow : MonoBehaviour
     void spawn()
     {
         ParticleLiquid pl = Instantiate<ParticleLiquid>(particleLiquid);
-        pl.transform.position = liquid.transform.position + liquid.transform.rotation*spawnPosition;
+        pl.transform.position = liquid.transform.position + liquid.transform.rotation * spawnPosition * ((RectTransform)transform).localScale.x;
         pl.GetComponent<Rigidbody>().velocity = -liquid.oldAcceleration+ liquid.transform.rotation *new Vector3(randomMovements.x*Random.value, randomMovements.y * Random.value, randomMovements.z * Random.value);
         pl.Property = liquid.Property;
         pl.Property.quantity = 1 / particlePerUnit;
