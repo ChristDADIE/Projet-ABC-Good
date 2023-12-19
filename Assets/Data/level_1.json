@@ -1,0 +1,39 @@
+{
+    "intro": "test",
+    "rounds":
+    [
+        {
+            "type": "pool",
+            "nb_pool": 1,
+
+            "enemies": ["slime"],
+            "number": [10],
+            "frequency": [10],
+            "factor": [1],
+
+            "condition": "time",
+            "time": 30
+        },
+        {
+            "type": "wave",
+
+            "enemies": ["slime"],
+            "number": [1],
+            "frequency": [2],
+            "factor": [1],
+
+            "condition": "kill",
+            "nb": 30
+        },
+        {
+            "type": "boss",
+
+            "enemies": ["slime"],
+            "number": [1],
+            "factor": [10],
+
+            "condition": "kill",
+            "nb": 1
+        }
+    ]
+}
