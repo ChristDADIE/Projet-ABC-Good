@@ -14,6 +14,9 @@ public class LevelManager : MonoBehaviour
     public float SpawnDistance = 15;
     List<Enemy> currentEnemies;
 
+    [System.NonSerialized]
+    public float life = 100;
+
     void Start()
     {
         enemynames = new string[enemies.Length];
@@ -70,6 +73,7 @@ public class LevelManager : MonoBehaviour
     bool active;
     public void StartLevel()
     {
+        life = 100;
         SetupAssets();
         active = true;
         data = JsonConvert.DeserializeObject<Data>(levels[Id].text);
@@ -81,8 +85,9 @@ public class LevelManager : MonoBehaviour
     {
         foreach (Enemy enemy in currentEnemies)
         {
-            Destroy(enemy);
+            Destroy(enemy.gameObject);
         }
+
         currentEnemies = new List<Enemy>();
     }
 
@@ -133,6 +138,13 @@ public class LevelManager : MonoBehaviour
 
     void LevelUpdate() // called approximately one time per fixed update
     {
+        if(life <= 0)
+        {
+            active = false;
+            KillAll();
+            GetComponent<MainManager>().LevelEnded();
+            return;
+        }
         if (phase >= data.rounds.Count)
         {
             active = false;
@@ -240,7 +252,7 @@ public class LevelManager : MonoBehaviour
         foreach(Enemy enemy in deads)
         {
             currentEnemies.Remove(enemy);
-            Destroy(enemy);
+            Destroy(enemy.gameObject);
         }
 
 

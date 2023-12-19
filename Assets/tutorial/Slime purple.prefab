@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: purple
-  baseHealth: 100
+  baseHealth: 50
   baseSpeed: 1
   baseAttack: 1
   baseAttackSpeed: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
   bouncyFactor: 0.2
   bouncyFrequency: 2
   subdivision: 0
-  factorDamage: {r: 1, g: 0, b: 1, a: 1}
+  factorDamage: {r: 0.5019608, g: 0, b: 0.5019608, a: 1}
 --- !u!1 &1788175603570003639
 GameObject:
   m_ObjectHideFlags: 0

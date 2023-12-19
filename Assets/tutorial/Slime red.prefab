@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: purple
-  baseHealth: 100
+  baseHealth: 50
   baseSpeed: 1
   baseAttack: 1
   baseAttackSpeed: 1

@@ -4916,4 +4916,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25ee7e1627ea16419bf230e3c44d976, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  penetration: 1
+  penetration: -1

@@ -48,9 +48,13 @@ public class Enemy : MonoBehaviour
         isDead = false;
         this.level = level;
         health = baseHealth * factor;
-        speed = baseSpeed * factor;
+        speed = baseSpeed;
+        attack = baseAttack*factor;
+        attackSpeed = baseAttackSpeed;
         transform.position = position;
+        
         float size = Mathf.Sqrt(factor);
+        range = baseRange-size+1;
         RectTransform rt = (RectTransform)transform;
         rt.localScale = new Vector3(size, size, size);
         cooldown = 0;
@@ -80,7 +84,8 @@ public class Enemy : MonoBehaviour
             cooldown += Time.fixedDeltaTime;
             if (cooldown > 1 / attackSpeed)
             {
-                // deal damages
+                MainManager.main.GetComponent<LevelManager>().life -= attack;
+                Debug.Log("attack !");
                 cooldown -= 1 / attackSpeed;
             }
         }
@@ -96,6 +101,7 @@ public class Enemy : MonoBehaviour
         if(other.gameObject.TryGetComponent(out PlayerAttack pa))
         {
             Damage damage = pa.Touched();
+
             for (int i = 0; i != damage.damageTypes.Length; ++i)
                 Damage(damage.damageAmounts[i], damage.damageTypes[i]);
         }

@@ -7,6 +7,9 @@ public class ParticleLiquid : MonoBehaviour
 
     AbstractLiquid property;
 
+    public float lifetime = 20;
+    float life;
+
     public AbstractLiquid Property
     {
         get
@@ -24,6 +27,7 @@ public class ParticleLiquid : MonoBehaviour
     float friction;
     void Start()
     {
+        life = 0;
         OutsideParticleManager.main.AddParticle(this);
     }
 
@@ -35,6 +39,12 @@ public class ParticleLiquid : MonoBehaviour
     private void FixedUpdate()
     {
         GetComponent<Rigidbody>().velocity *= (1 - friction * Time.fixedDeltaTime);
+        life += Time.fixedDeltaTime;
+        if(life > lifetime)
+        {
+            OutsideParticleManager.main.RemoveParticle(this);
+            Destroy(this);
+        }
     }
 
     // Update is called once per frame

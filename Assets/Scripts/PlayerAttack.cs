@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
     public Damage Touched()
     {
         penetration -= 1;
-        if (penetration <= 0)
+        if (penetration == 0)
             Destroy(gameObject);
         return damage;
 

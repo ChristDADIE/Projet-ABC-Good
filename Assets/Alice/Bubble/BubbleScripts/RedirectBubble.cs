@@ -5,12 +5,11 @@ using UnityEngine;
 public class RedirectBubble : MonoBehaviour
 {
 
-    public GameObject camera;
     public GameObject canvas;
 
 
     void Update()
     {
-        canvas.transform.rotation = Quaternion.LookRotation(canvas.transform.position - camera.transform.position);
+        canvas.transform.rotation = Quaternion.LookRotation(canvas.transform.position - Camera.main.transform.position) ;
     }
 }
