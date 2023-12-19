@@ -52,11 +52,7 @@ public class PauseManager : MonoBehaviour
         // on fait pause au jeu
         ToggleTimeScale(isMenuActive);
 
-        //// Positionne le menu devant la caméra VR lorsque le menu est activé
-        //if (isMenuActive && vrCamera != null)
-        //{
-        //    PositionMenuInFrontOfCamera();
-        //}
+
     }
 
     public void ToggleMenuAndEnvironment(bool pauseMenuActive)
@@ -92,24 +88,5 @@ public class PauseManager : MonoBehaviour
         }
     }
 
-    //private void PositionMenuInFrontOfCamera()
-    //{
-    //    // Place le menu devant la caméra et oriente-le vers la caméra
-    //    Vector3 cameraPosition = vrCamera.transform.position;
-
-    //    float distanceFromCamera = 2.0f;
-
-    //    Vector3 menuPosition = cameraPosition + vrCamera.transform.forward * distanceFromCamera;
-    //    menuPause.transform.position = menuPosition;
-
-
-    //    // Assurez-vous que le panneau MenuPause est actif avant de le positionner
-    //    if (menuPause.activeSelf)
-    //    {
-    //        // Oriente le menu vers la caméra
-    //        //menuPause.transform.LookAt(cameraPosition + vrCamera.transform.forward);
-    //        menuPause.transform.LookAt(2 * menuPause.transform.position - cameraPosition);
-    //    }
-    //}
 
 }
