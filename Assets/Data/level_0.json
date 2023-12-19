@@ -1,0 +1,69 @@
+{
+    "intro": "test",
+  "rounds": [
+    {
+      "type": "wave",
+
+      "enemies": [ "blue" ],
+      "number": [ 1 ],
+      "frequency": [ 5 ],
+      "factor": [ 1 ],
+
+      "condition": "kill",
+      "nb": 5
+    },
+    {
+      "type": "wave",
+
+      "enemies": [ "blue", "red" ],
+      "number": [ 1,1 ],
+      "frequency": [ 10, 10 ],
+      "factor": [ 1,1 ],
+
+      "condition": "kill",
+      "nb": 10
+    },
+    {
+      "type": "boss",
+
+      "enemies": [ "purple" ],
+      "number": [ 1 ],
+      "factor": [ 1 ],
+
+      "condition": "kill",
+      "nb": 1
+    },
+    {
+      "type": "wave",
+
+      "enemies": [ "purple" ],
+      "number": [ 1 ],
+      "frequency": [ 10 ],
+      "factor": [ 1 ],
+
+      "condition": "kill",
+      "nb": 5
+    },
+    {
+      "type": "wave",
+
+      "enemies": [ "blue","red","purple" ],
+      "number": [ 3,3,2 ],
+      "frequency": [ 20,20,20 ],
+      "factor": [ 1,1,1 ],
+
+      "condition": "kill",
+      "nb": 5
+    },
+    {
+      "type": "boss",
+
+      "enemies": [ "purple" ],
+      "number": [ 1 ],
+      "factor": [ 10 ],
+
+      "condition": "kill",
+      "nb": 1
+    }
+  ]
+}

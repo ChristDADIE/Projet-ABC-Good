@@ -8,11 +8,13 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField]
     int penetration = 1;
     
-    
-    Damage damage;
-    public void ScaleMode(float scaling)
+    [System.NonSerialized]
+    public Damage damage;
+    public void ScaleMode(float scaling,AbstractLiquid liquid = null)
     {
         Setup();
+        if (liquid != null)
+            damage.liquid = liquid;
         for (int i = 0;i != damage.damageAmounts.Length;++i)
         {
             damage.damageAmounts[i] *= scaling;
@@ -27,6 +29,8 @@ public class PlayerAttack : MonoBehaviour
         return damage;
 
     }
+
+    
     void Setup()
     {
         damage = new Damage();

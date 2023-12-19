@@ -34,7 +34,7 @@ public class Break : MonoBehaviour
             splash.GetComponent<ParticleSystemRenderer>().material.color = liquid.Property.color;
             float scale = liquid.Property.quantity * 2;
             ((RectTransform)splash.transform).localScale = new Vector3(scale, scale, scale);
-            splash.GetComponent<PlayerAttack>().ScaleMode(scale);
+            splash.GetComponent<PlayerAttack>().ScaleMode(scale,liquid.Property);
         }
 
 
