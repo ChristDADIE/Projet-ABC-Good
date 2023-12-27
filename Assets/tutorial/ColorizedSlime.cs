@@ -12,10 +12,9 @@ public class ColorizedSlime : Slime
             Damage damage = pa.Touched();
             if (damage.liquid == null)
                 return;
-            float factor = Mathf.Pow((factorDamage.r - damage.liquid.color.r), 2) + Mathf.Pow((factorDamage.g - damage.liquid.color.g), 2) + Mathf.Pow((factorDamage.b - damage.liquid.color.b), 2);
-            factor /= 3;
+            float factor = Mathf.Sqrt(Mathf.Pow((factorDamage.r - damage.liquid.color.r), 2) + Mathf.Pow((factorDamage.g - damage.liquid.color.g), 2) + Mathf.Pow((factorDamage.b - damage.liquid.color.b), 2));
+            factor /= Mathf.Sqrt(3);
             factor = 1 - factor;
-            Debug.Log("facteur de dégât = " + factor);
             if (factor < 0.6667)
                 factor = 0;
 

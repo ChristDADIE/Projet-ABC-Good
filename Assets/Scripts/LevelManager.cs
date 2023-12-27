@@ -236,7 +236,7 @@ public class LevelManager : MonoBehaviour
                         SpawnEnemies(data.rounds[phase].enemies[enemyId], data.rounds[phase].number[enemyId], data.rounds[phase].factor[enemyId]);
                     }
                 }
-                if (enemykilled > data.rounds[phase].nb)
+                if (enemykilled >= data.rounds[phase].nb)
                 {
                     phase += 1;
                     ResetVariables();
